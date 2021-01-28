@@ -1,23 +1,21 @@
 <nav x-data="{ open: false }" class="tw-min-w-full tw-bg-white tw-border-b tw-border-gray-100 tw-mb-15">
     <!-- Primary Navigation Menu -->
-    <div class="tw-max-w-7xl tw-min-w-full tw-mx-auto tw-px-4 sm:tw-px-6 lg:tw-px-8">
+    <div
+    style="border-left: dotted 1px #cecece;  border-right: dotted 1px #cecece;"
+    class="tw-max-w-7xl tw-min-w-full tw-mx-auto tw-px-4 sm:tw-px-6 lg:tw-px-8">
         <div class="tw-flex tw-justify-between tw-h-16">
             <div class="tw-flex">
                 
            
 
                 <!-- Navigation Links -->
-                <!-- <div class="tw-hidden tw-space-x-8 sm:tw--my-px sm:tw-ml-10 sm:tw-flex">
-                    <x-jet-nav-link href="{{ route('dashboard') }}" :active="request()->routeIs('dashboard')">
-                        {{ __('Dashboard') }}
-                    </x-jet-nav-link>
-                </div> -->
-                <div class="tw-hidden tw-space-x-8 sm:tw--my-px sm:tw-ml-10 sm:tw-flex">
+
+                <div class="tw-hidden  sm:tw--my-px sm:tw-mr-10 sm:tw-flex">
                     <x-jet-nav-link href="{{ route('articles.index') }}" :active="request()->routeIs('articles')">
                         {{ __('Все статьи') }}
                     </x-jet-nav-link>
                 </div>
-                <div class="tw-hidden tw-space-x-8 sm:tw--my-px sm:tw-ml-10 sm:tw-flex">
+                <div class="tw-hidden  sm:tw--my-px sm:tw-mr-10 sm:tw-flex">
                     <x-jet-nav-link href="{{ route('articles.create') }}" :active="request()->routeIs('articles/create')">
                         {{ __('Создать статью') }}
                     </x-jet-nav-link>

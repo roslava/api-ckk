@@ -21315,9 +21315,9 @@ window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! /Users/rostislavnenasev/Documents/work/htdocs/allPHP/smi-api-v11/resources/js/app.js */"./resources/js/app.js");
-__webpack_require__(/*! /Users/rostislavnenasev/Documents/work/htdocs/allPHP/smi-api-v11/resources/sass/app.scss */"./resources/sass/app.scss");
-module.exports = __webpack_require__(/*! /Users/rostislavnenasev/Documents/work/htdocs/allPHP/smi-api-v11/resources/sass/bootstrap.scss */"./resources/sass/bootstrap.scss");
+__webpack_require__(/*! /Users/rostislavnenasev/Documents/work/htdocs/allPHP/api-ckk/resources/js/app.js */"./resources/js/app.js");
+__webpack_require__(/*! /Users/rostislavnenasev/Documents/work/htdocs/allPHP/api-ckk/resources/sass/app.scss */"./resources/sass/app.scss");
+module.exports = __webpack_require__(/*! /Users/rostislavnenasev/Documents/work/htdocs/allPHP/api-ckk/resources/sass/bootstrap.scss */"./resources/sass/bootstrap.scss");
 
 
 /***/ })
