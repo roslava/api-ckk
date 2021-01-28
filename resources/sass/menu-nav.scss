@@ -1,0 +1,30 @@
+.nav-ckk {
+
+    // nav-ckk__wrapper
+    &__wrapper {
+        display: flex;
+        min-width: 100%;
+        // background-color: rgb(224, 134, 30);
+        justify-content: space-between;
+        align-content: center;
+        min-height: 100px;
+    }
+
+
+
+    // nav-ckk__all-links
+    &__all-links {
+        width: 40%;
+        display:flex;
+        // background-color: blue;
+        min-height: 100%;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+
+    // nav-ckk__drop-down
+    &__drop-down {
+      margin-top:20px;
+    }
+}

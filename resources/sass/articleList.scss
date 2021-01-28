@@ -1,0 +1,102 @@
+.article {
+    &__articleItem {
+    border: solid black 1px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-color: #d2d6dc;
+    border-width: 1px;
+    margin-bottom: 25px !important;
+    width: 100%;
+    margin: 0 auto;
+    padding: 10px;
+    border-radius: 3px;
+    background-color:#ffffff;
+    -webkit-box-shadow: 0px 0px 6px 1px rgba(0, 0, 0, 0.5); 
+    box-shadow: 0px 0px 6px 1px rgba(0, 0, 0, 0.5);
+    }
+
+    &__articleTitle {
+        font-size: 16px;
+        font-weight: 500;
+    }
+
+    &__articleIdWrap {
+        border-right: 1px black solid;
+        padding-right: 5px;
+        align-self: stretch;
+        display: flex;
+    }
+
+    &__articleId {
+        font-size: 13px;
+        font-weight: 400;
+        align-self: center;
+        min-width:40px;
+        text-align: center;
+    }
+
+    &__article-cover {
+        display: block;
+        min-width: 100px;
+        max-width: 100px;
+        min-height: 100px;
+        max-height: 100px;
+        border-radius: 50%;
+        overflow: hidden;
+        
+        
+    }
+   
+    &__articleButtons {
+        text-decoration: none;
+        display: inline-block;
+         min-width: 258px;
+        //  background-color: yellow;
+    }
+
+    &__articleForm{
+      display: contents;
+    }
+
+    &__articleButton {
+        &_destroy {
+            background-color: rgb(199, 63, 10);
+            padding: 6px;
+            font-weight: 500;
+            color: white;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 15px;
+            border-radius: 2px;
+            cursor: pointer;
+        }
+
+        &_read {
+            background-color: rgb(50, 79, 175);
+            padding: 6px;
+            font-weight: 500;
+            color: white;
+            text-decoration: none;
+            display: inline-block;
+            border-radius: 2px;
+            font-size: 15px;
+        }
+
+        &_edit {
+            background-color: rgb(72, 163, 45);
+            padding: 6px;
+            font-weight: 500;
+            color: white;
+            text-decoration: none;
+            display: inline-block;
+            border-radius: 2px;
+            font-size: 15px;
+        }
+    }
+
+
+
+}
+
+

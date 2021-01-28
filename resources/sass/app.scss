@@ -1,0 +1,258 @@
+// @import'./bootstrap.scss';
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+@import './article-show.scss';
+@import './article-preview.scss';
+@import './article-form.scss';
+@import './message.scss';
+@import './profile.scss';
+@import './menu-nav.scss';
+@import './summernote-bs4.scss';
+@import './ckk-inputfile.scss';
+@import './modalCustom.scss';
+
+
+
+
+
+
+
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,300;1,400;1,500;1,700&display=swap');
+
+
+
+
+
+
+* {
+    margin: 0;
+    padding: 0;
+  }
+
+  html,
+  body {
+    height: 100%;
+    font-family: 'Roboto', sans-serif !important;
+    
+  }
+
+
+
+p{
+  margin-bottom: 10px !important;
+  line-height: 25px !important;
+  font-size: 18px !important;
+  color:rgb(0, 0, 0);
+  font-weight: 400 !important;
+
+}
+
+
+
+  a{
+    text-decoration: none !important;
+  }
+
+  h1, h2, h3, h4, h5, h6{
+    font-family: Roboto !important;
+    color: rgba(0, 0, 0, 0.87) !important;
+    text-align: left !important;
+  }
+
+
+  h1{
+ font-weight: 300 !important;
+font-size: 96px !important;
+letter-spacing: -0.01em !important;
+line-height: 112px !important;
+  }
+
+
+  h2{
+font-weight: 300 !important;
+font-size: 60px !important;
+letter-spacing: -0.01em !important;
+line-height: 72px !important;
+  }
+
+  h3{
+margin-bottom: 15px !important;
+font-weight: normal !important;
+font-size: 48px !important;
+line-height: 56px !important;
+  }
+
+
+
+h4{
+
+font-weight: normal !important;
+font-size: 34px !important;
+line-height: 36px !important;
+}
+
+h5{
+font-weight: normal !important;
+font-size: 24px !important;
+letter-spacing: 0.01em !important;
+line-height: 24px !important;
+}
+
+
+  h6{
+   font-weight: 500 !important;
+    font-size: 20px !important;
+    letter-spacing: 0.01em !important;
+    line-height: 24px !important;
+    margin-top:0px !important;
+    margin-bottom:18px !important;
+    }
+ 
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+//   background-color: rgb(112, 201, 194);
+}
+
+.content {
+    flex: 1 0 auto;
+    
+    background: #f5f5f5;
+  }
+
+.header-area{
+    min-width: 100%;
+    background-color: rgb(255, 255, 255);
+}
+
+
+.footer {
+    flex: 0 0 auto;
+    
+    // background-color: rgb(69, 115, 243);
+  }
+
+.inputfile {
+    width: 0.1px;
+    height: 0.1px;
+    opacity: 0;
+    overflow: hidden;
+    position: absolute;
+    z-index: -1;
+}
+
+.inputfile_label {
+    font-size: 1.25em;
+    font-weight: 400;
+    color: white;
+    background-color: black;
+    display: inline-block;
+    cursor: pointer;
+    padding:8px;
+    border-radius:3px;
+  }
+
+.inputfile_label:focus,
+.inputfile_label:hover {
+    // background-color: red;
+}
+
+
+
+.ckk-container {
+    margin: 0 auto;
+    max-width: 1000px;
+}
+
+
+.note-editor .note-editable {
+  line-height: 20px;
+  font-size: 18px;
+}
+
+.note-editable p{
+  margin-bottom: 10px !important;
+  line-height: 25px !important;
+  font-size: 18px !important;
+  color:rgb(0, 0, 0);
+  font-weight: 400 !important;
+
+}
+.note-codable p{
+  margin-bottom: 10px !important;
+  line-height: 25px !important;
+  font-size: 18px !important;
+  color:rgb(0, 0, 0);
+  font-weight: 400 !important;
+
+}
+
+.note-editor {
+  background-color: #fafafa;
+  border-radius:3px;
+  transition: ease-in-out, background-color .35s ease-in-out;
+}
+
+.note-editor:focus {
+  outline: 0;
+  background-color: #ffffff;
+}
+
+
+
+
+.card-block {
+  background-color: #fafafa;
+  transition: ease-in-out, background-color .35s ease-in-out;
+
+
+
+
+
+}
+
+.card-block p{
+  margin-bottom: 10px !important;
+  line-height: 25px !important;
+  font-size: 18px !important;
+  color:rgb(0, 0, 0);
+  font-weight: 400 !important;
+}
+
+
+
+
+
+
+.card-block:focus {
+
+  background-color: #ffffff;
+}
+
+
+.ckk-footer{
+// margin-top:20px !important;
+background-color:#35363a;
+
+}
+
+
+.dropdown-style{
+  min-width: 220px !important;
+}
+
+
+.blockquote{
+  padding-left: 10px !important;
+  border-left: 2px solid rgb(235, 150, 39) !important;
+  color: #43536b;
+  margin-bottom: 10px !important;
+  line-height: 25px !important;
+  font-size: 18px !important;
+}
+
+
