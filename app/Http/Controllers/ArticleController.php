@@ -92,9 +92,9 @@ class ArticleController extends Controller
 
         $dom = new \DomDocument();
         @$dom->loadHtml(mb_convert_encoding($article['article_text'], 'HTML-ENTITIES', 'UTF-8'), LIBXML_HTML_NOIMPLIED | LIBXML_HTML_NODEFDTD);
-
+        
         $images = $dom->getElementsByTagName('img');
-
+   
        
         
 
@@ -129,9 +129,11 @@ class ArticleController extends Controller
 				$img->setAttribute('src', $new_src);
 			} // <!--endif
         }
-
-        $article['article_text'] = $dom->saveHTML();
-
+        
+        
+        $article['article_text'] = html_entity_decode($dom->saveHTML());
+        //Было $article['article_text'] = $dom->saveHTML();
+        //В базу записывалась абракадабра, если был русский текст
 
         //Обложка
         if ($request->hasFile('article_cover')) {
