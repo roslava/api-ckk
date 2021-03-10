@@ -12,6 +12,9 @@
 @import './ckk-inputfile.scss';
 @import './modalCustom.scss';
 @import './dash-board.scss';
+@import './footer.scss';
+
+
 
 
 
@@ -132,11 +135,11 @@ line-height: 24px !important;
 }
 
 
-.footer {
-    flex: 0 0 auto;
+// .footer {
+//     flex: 0 0 auto;
     
-    // background-color: rgb(69, 115, 243);
-  }
+//     // background-color: rgb(69, 115, 243);
+//   }
 
 .inputfile {
     width: 0.1px;
@@ -236,11 +239,7 @@ line-height: 24px !important;
 }
 
 
-.ckk-footer{
-// margin-top:20px !important;
-background-color:#35363a;
 
-}
 
 
 .dropdown-style{

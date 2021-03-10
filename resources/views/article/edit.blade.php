@@ -16,9 +16,8 @@
         @endif
 
         <div id="article-form">
-
-                <!-- <form  action="/new-article-form/submit" method="POST" class="article-form"> -->
-                <form action="{{ route('articles.update', $article)}}" method="POST" class="article-form" enctype="multipart/form-data">
+                <form action="{{ route('articles.update', $article)}}" method="POST" enctype="multipart/form-data">
+                <div class="article-form">
                         @csrf
                         @method('PATCH')
                         <div class="article-form__groupe">
@@ -71,12 +70,24 @@
 
 
 
-                        <div class="">
+                        </div>
+
+                        <div class="article-form__btn-groupe">
                                 <input id="submit" type="submit" class="article-form__submit" value="Разместить отредактированную статью" />
+
+                                <div class="article-form__cansel">
+                                        <a href="{{ route('articles.index')}}">Отменить редактирование</a>
+                                </div>
                         </div>
 
                 </form>
         </div>
+
+
+
+
+
+
 
 </div>
 

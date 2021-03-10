@@ -8,20 +8,21 @@
 .article-form {
     width: 100%;
     margin: 0 auto;
-    
+
     padding: 10px;
     padding-top: 1px;
     border-radius: 3px;
-    background-color:#ffffff;
+    background-color: #ffffff;
 
--webkit-box-shadow: 0px 0px 6px 1px rgba(0, 0, 0, 0.5); 
-box-shadow: 0px 0px 6px 1px rgba(0, 0, 0, 0.5);
+    -webkit-box-shadow: 0px 0px 6px 1px rgba(0, 0, 0, 0.5);
+    box-shadow: 0px 0px 6px 1px rgba(0, 0, 0, 0.5);
 
     &__groupe {
         margin: 10px;
         margin-top: 20px;
+        margin-bottom: 20px;
         box-sizing: border-box;
-        
+
     }
 
     &__label {
@@ -45,17 +46,18 @@ box-shadow: 0px 0px 6px 1px rgba(0, 0, 0, 0.5);
         font-size: 1em;
         transition: ease-in-out, background-color .35s ease-in-out;
     }
+
     &__input::placeholder {
         font-size: 1em;
-      }
+    }
 
-      &__input:focus {
-            outline: 0;
-            border-color: #d2d6dc;
-            border-width: 1px;
-            font-size: 1em;
-            background-color: #ffffff;
-      }
+    &__input:focus {
+        outline: 0;
+        border-color: #d2d6dc;
+        border-width: 1px;
+        font-size: 1em;
+        background-color: #ffffff;
+    }
 
 
     &__leadarea {
@@ -77,7 +79,7 @@ box-shadow: 0px 0px 6px 1px rgba(0, 0, 0, 0.5);
         height: 150px;
         outline: 0;
         background-color: #ffffff;
-  }
+    }
 
     &__textarea {
         width: 100%;
@@ -93,13 +95,93 @@ box-shadow: 0px 0px 6px 1px rgba(0, 0, 0, 0.5);
 
 
     &__submit {
-        padding-top: 10px;
-        padding-bottom: 12px;
+        box-sizing: border-box;
+        padding-top: 9px;
+        padding-bottom: 7px;
         padding-left: 10px;
         padding-right: 10px;
         font-size: 16px;
         border-radius: 3px;
-        color: rgb(255, 255, 255);
+        color: rgb(204, 248, 209);
         background-color: rgb(43, 194, 55);
+        -webkit-box-shadow: 1px 0px 6px 1px rgba(0, 0, 0, 0.15);
+        box-shadow: 1px 0px 6px 1px rgba(0, 0, 0, 0.15);
+        transition: all .7s;
+
+        @media (max-width:473px) {
+
+            margin: 0 auto;
+        }
+    }
+
+    &__submit:hover {
+        background-color: rgb(36, 172, 47);
+        -webkit-box-shadow: -8px 0px 6px 1px rgba(0, 0, 0, 0.3);
+        box-shadow: -2px 0px 6px 1px rgba(0, 0, 0, 0.3);
+        color: white;
+    }
+
+    &__cansel {
+        display: flex;
+        min-width: 223px;
+        max-width: 223px;
+        min-height: 32px;
+        max-height: 32px;
+        align-items: center;
+        justify-content: center;
+        border-radius: 3px;
+    }
+
+
+    &__cansel a {
+        display: flex;
+        border-radius: 3px;
+        align-items: center;
+        justify-content: center;
+        min-height: 40px;
+        box-sizing: border-box;
+        margin-bottom: 0px;
+        width: 100%;
+        padding-left: 10px;
+        padding-right: 10px;
+        font-size: 16px;
+        color: rgb(250, 205, 205);
+        background-color: rgb(233, 96, 96);
+        -webkit-box-shadow: 1px 0px 6px 1px rgba(0, 0, 0, 0.15);
+        box-shadow: 1px 0px 6px 1px rgba(0, 0, 0, 0.15);
+        transition: all .7s;
+
+        @media (max-width:473px) {
+            //  margin-bottom:30px;
+        }
+    }
+
+    &__cansel a:hover {
+        color: rgb(255, 255, 255);
+        background-color: rgb(219, 76, 76);
+        -webkit-box-shadow: -8px 0px 6px 1px rgba(0, 0, 0, 0.3);
+        box-shadow: -2px 0px 6px 1px rgba(0, 0, 0, 0.3);
+    }
+
+    &__btn-groupe {
+        display: flex;
+        padding: 20px;
+        margin-top: 20px;
+        margin-bottom: 40px;
+        justify-content: space-between;
+        align-items: center;
+        -webkit-box-shadow: 0px 0px 6px 1px rgba(0, 0, 0, 0.5);
+        box-shadow: 0px 0px 6px 1px rgba(0, 0, 0, 0.5);
+        border-radius: 3px;
+
+        @media (max-width:608px) {
+            flex-direction: column;
+            padding: 20px;
+            padding-bottom: 23px;
+            justify-content: space-between;
+            align-items: center;
+            height: 136px;
+
+        }
     }
 }
