@@ -10,14 +10,11 @@ use Illuminate\Support\Facades\Storage;
 use App\Http\Requests\ArticleRequest;
 use App\Http\Requests\RequestArticleCreate;
 use App\Http\Requests\RequestArticleEdit;
-// use Illuminate/Filesystem/Filesystem
-// use Illuminate\Filesystem\Filesystem\Fi;
 
 
 
-// use Image;
-// use App\Image;
-// use Image as InterventionImage;
+
+
 use Intervention\Image\Facades\Image as Image;
 
 
@@ -31,11 +28,8 @@ class ArticleController extends Controller
      */
     public function index()
     {
-
         $articles = Article::latest()->paginate(5)->withQueryString();
-
-        $quantityOfArticles = count(Article::all());
-        return view('article.index', compact('articles', 'quantityOfArticles'));
+        return view('article.index', compact('articles'));
     }
 
 

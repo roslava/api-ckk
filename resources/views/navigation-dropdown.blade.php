@@ -9,6 +9,11 @@
            
 
                 <!-- Navigation Links -->
+                <div class="tw-hidden  sm:tw--my-px sm:tw-mr-10 sm:tw-flex">
+                    <x-jet-nav-link href="{{ route('dashboard') }}" :active="request()->routeIs('dashboard')">
+                        {{ __('Главная') }}
+                    </x-jet-nav-link>
+                </div>
 
                 <div class="tw-hidden  sm:tw--my-px sm:tw-mr-10 sm:tw-flex">
                     <x-jet-nav-link href="{{ route('articles.index') }}" :active="request()->routeIs('articles')">
@@ -122,7 +127,7 @@
     <div :class="{'tw-block': open, 'tw-hidden': ! open}" class="tw-hidden sm:tw-hidden">
         <div class="tw-pt-2 tw-pb-3 tw-space-y-1">
             <x-jet-responsive-nav-link href="{{ route('dashboard') }}" :active="request()->routeIs('dashboard')">
-                {{ __('Dashboard') }}
+                {{ __('Главная') }}
             </x-jet-responsive-nav-link>
         </div>
         <div class="tw-pt-2 tw-pb-3 tw-space-y-1">
