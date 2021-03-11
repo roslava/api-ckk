@@ -17,55 +17,79 @@
 
         <div id="article-form">
                 <form action="{{ route('articles.update', $article)}}" method="POST" enctype="multipart/form-data">
-                <div class="article-form">
-                        @csrf
-                        @method('PATCH')
-                        <div class="article-form__groupe">
-                                <label class="article-form__label" for="smi_name">Название СМИ:</label>
-                                <input value="{{ $article->smi_name }}" id="smi_name" name="smi_name" type="text" class="article-form__input" placeholder="Введите, пожалуйста, название статьи">
-                        </div>
+                        <div class="article-form">
+                                @csrf
+                                @method('PATCH')
+                                <div class="article-form__groupe">
+                                        <label class="article-form__label" for="smi_name">Название СМИ:</label>
+                                        <input value="{{ $article->smi_name }}" id="smi_name" name="smi_name" type="text" class="article-form__input" placeholder="Введите, пожалуйста, название статьи">
+                                </div>
 
-                        <div class="article-form__groupe">
-                                <label class="article-form__label" for="smi_author">Автор:</label>
-                                <input value="{{ $article->smi_author }}" id="smi_author" name="smi_author" type="text" class="article-form__input" placeholder="Введите, пожалуйста, Имя автора">
-                        </div>
+                                <div class="article-form__groupe">
+                                        <label class="article-form__label" for="smi_author">Автор:</label>
+                                        <input value="{{ $article->smi_author }}" id="smi_author" name="smi_author" type="text" class="article-form__input" placeholder="Введите, пожалуйста, Имя автора">
+                                </div>
 
-                        <div class="article-form__groupe">
-                                <label class="article-form__label" for="smi_original">Ссылка на первоисточник:</label>
-                                <input value="{{ $article->smi_original }}" id="smi_original" name="smi_original" type="text" class="article-form__input" placeholder="Введите, пожалуйста, ссылку на первоисточник">
-                        </div>
+                                <div class="article-form__groupe">
+                                        <label class="article-form__label" for="smi_original">Ссылка на первоисточник:</label>
+                                        <input value="{{ $article->smi_original }}" id="smi_original" name="smi_original" type="text" class="article-form__input" placeholder="Введите, пожалуйста, ссылку на первоисточник">
+                                </div>
 
-                        <div class="article-form__groupe">
-                                <label class="article-form__label" for="smi_date">Дата:</label>
-                                <input value="{{ $article->smi_date }}" id="smi_date" name="smi_date" type="text" class="article-form__input" placeholder="Введите, пожалуйста, дату публикации статьи">
-                        </div>
+                                <div class="article-form__groupe">
+                                        <label class="article-form__label" for="smi_date">Дата:</label>
+                                        <input value="{{ $article->smi_date }}" id="smi_date" name="smi_date" type="text" class="article-form__input" placeholder="Введите, пожалуйста, дату публикации статьи">
+                                </div>
 
-                        <div class="article-form__groupe">
-                                <label class="article-form__label" for="article_title">Заголовок:</label>
-                                <input value="{{ $article->article_title }}" id="article_title" name="article_title" type="text" class="article-form__input" placeholder="Введите, пожалуйста, заголовок статьи">
-                        </div>
-
-
-                        <div class="article-form__groupe">
-                                <label class="article-form__label" for="article_lead">Лид:</label>
-                                <textarea id="article_lead" name="article_lead" class="article-form__leadarea" placeholder="Введите, пожалуйста, лид статьи">{{ $article->article_lead }}</textarea>
-                        </div>
+                                <div class="article-form__groupe">
+                                        <label class="article-form__label" for="article_title">Заголовок:</label>
+                                        <input value="{{ $article->article_title }}" id="article_title" name="article_title" type="text" class="article-form__input" placeholder="Введите, пожалуйста, заголовок статьи">
+                                </div>
 
 
-                        <div class="article-form__groupe">
-                                <label class="article-form__label" for="article_text">Текст:</label>
-                                <textarea value="{{ old('article_text') }}" id="article_text" name="article_text" class="article-form__textarea" placeholder="Введите, пожалуйста, текст статьи">{!!$article->article_text!!}</textarea>
-                        </div>
+                                <div class="article-form__groupe">
+                                        <label class="article-form__label" for="article_lead">Лид:</label>
+                                        <textarea id="article_lead" name="article_lead" class="article-form__leadarea" placeholder="Введите, пожалуйста, лид статьи">{{ $article->article_lead }}</textarea>
+                                </div>
+
+
+                                <div class="article-form__groupe">
+                                        <label class="article-form__label" for="article_text">Текст:</label>
+                                        <textarea value="{{ old('article_text') }}" id="article_text" name="article_text" class="article-form__textarea" placeholder="Введите, пожалуйста, текст статьи">{!!$article->article_text!!}</textarea>
+                                </div>
 
 
 
 
-                        <div class="article-form__groupe"> <label class="article-form__label" for="article_cover">Обложка статьи:</label></div>
-                        <div class="ckk-inputfile">
-                                <img style="width: 100px;" src="{{ Storage::url($article->article_cover) }}">
-                                <label for="article_cover" class="inputfile_label">Выберать файл для замены обложки</label>
-                                <input type="file" value="{{$article->article_cover}}" name="article_cover" id="article_cover" name="inputFile1" class="inputfile">
-                        </div>
+
+                                <div class="article-form__groupe"> <label class="article-form__label" for="article_cover">Обложка статьи:</label></div>
+                                <div class="ckk-inputfile">
+                                  
+                                
+                                <div style="display:flex;">
+
+
+                                <div class="ckk-inputfile__cover" style="background-image: url('{{ Storage::url($article->article_cover) }}'); background-size: cover;">
+                                        </div>
+                                        <div class="ckk-inputfile__arrow"
+                                        style="background-image: url('{{asset("storage/regular_img/icons/swirly-arrow.svg")}}');"
+                                        >
+                                             
+                                        </div>
+                                        <div class="ckk-inputfile__cover-annotation">
+                                                        <p>
+                                                                Вы можете заменить эту обложку.<br>
+                                                                Нажмите круглую кнопку «Выбрать новую обложку»<br>
+                                                                и укажите нужный файл.                                                               Новая обложка отобразится <br>
+                                                                после нажатия зеленой кнопки «Сохранить изменения».
+                                                        </p>
+                                                </div>
+
+                                                </div>
+
+
+                                        <label for="article_cover" class="ckk-inputfile__label">Выбрать новую обложку</label>
+                                        <input type="file" value="{{$article->article_cover}}" name="article_cover" id="article_cover" name="inputFile1" class="inputfile">
+                                </div>
 
 
 
@@ -73,7 +97,7 @@
                         </div>
 
                         <div class="article-form__btn-groupe">
-                                <input id="submit" type="submit" class="article-form__submit" value="Разместить отредактированную статью" />
+                                <input id="submit" type="submit" class="article-form__submit" value="Сохранить изменения" />
 
                                 <div class="article-form__cansel">
                                         <a href="{{ route('articles.index')}}">Отменить редактирование</a>
