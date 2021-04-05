@@ -16,22 +16,16 @@ use App\Http\Middleware\Authenticate;
 |
 */
 
-// Route::get('/', function () {
-//     return view('welcome');
-// });
-
-
-Route::resource('articles', ArticleController::class)->middleware('auth');
 
 Route::redirect('/','articles');
 Route::redirect('register','articles');
+
+Route::resource('articles', ArticleController::class)->middleware('auth');
 
 Route::middleware(['auth:sanctum', 'verified'])->get('/', function () {
     return view('dashboard');
 })->name('dashboard');
 
-// Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
-//     return view('dashboard');
-// })->name('dashboard');
+
 
 
