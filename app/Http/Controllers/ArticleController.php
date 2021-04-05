@@ -268,16 +268,12 @@ class ArticleController extends Controller
 
 
 
-        //   Обложка     
+        //Обложка     
 
         if ($request->hasFile('article_cover')) {
 
-
-
             Storage::delete($article->article_cover);
-            
-
-
+ 
             // cache the file
             $file = $request->file('article_cover');
 

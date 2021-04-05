@@ -131,30 +131,16 @@
         <button class="oversizeModalButton" id='oversizeModalButton'>Продолжить</button>
 
 </div>
-
-
-
-
-
-
-
-
-
-
-
-
 @endsection
 
+
+
+
+
+
 @push('styles')
-
-
 <link rel="stylesheet" href="{{ asset('plugins/summernote/summernote-bs4.min.css')}}">
-<!-- <link rel="stylesheet" href="{{ asset('plugins/summernote/bootstrap.min.css')}}"> -->
-@endpush
-
-
-@push('styles')
-<link rel="stylesheet" href="{{ asset('plugins/summernote/summernote-bs4.css')}}">
+<!-- <link rel="stylesheet" href="{{ asset('plugins/summernote/summernote-bs4.css')}}"> -->
 @endpush
 
 
@@ -162,6 +148,4 @@
 <script src="{{asset('plugins/summernote/summernote-bs4.js')}}"></script>
 <script src="{{asset('plugins/summernote/lang/summernote-ru-RU.min.js')}}"></script>
 <script src="{{asset('plugins/summernote/summernote-customize.js')}}"></script>
-
-
 @endpush
