@@ -23,8 +23,8 @@ use App\Http\Middleware\Authenticate;
 
 Route::resource('articles', ArticleController::class)->middleware('auth');
 
-Auth::routes(['register' => false]);
-
+Route::redirect('/','articles');
+Route::redirect('register','articles');
 
 Route::middleware(['auth:sanctum', 'verified'])->get('/', function () {
     return view('dashboard');
