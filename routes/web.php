@@ -17,6 +17,7 @@ use App\Http\Controllers\ArticleController;
 
 
 Route::redirect('/','articles');
+
 Route::redirect('register','articles');
 
 Route::resource('articles', ArticleController::class)->middleware('auth');
@@ -24,5 +25,7 @@ Route::resource('articles', ArticleController::class)->middleware('auth');
 Route::middleware(['auth:sanctum', 'verified'])->get('/', function () {
     return view('dashboard');
 })->name('dashboard');
+
+Route::redirect('dashboard','articles');
 
 
