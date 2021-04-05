@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ArticleController;
+use App\Http\Middleware\Authenticate;
 
 
 /*
@@ -22,7 +23,7 @@ use App\Http\Controllers\ArticleController;
 
 Route::resource('articles', ArticleController::class)->middleware('auth');
 
-
+Auth::routes(['register' => false]);
 
 
 Route::middleware(['auth:sanctum', 'verified'])->get('/', function () {
