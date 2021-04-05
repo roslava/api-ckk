@@ -2,8 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ArticleController;
-use App\Http\Middleware\Authenticate;
-use App\Fortify\Http\Controllers\RegisteredUserController;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -27,5 +26,3 @@ Route::middleware(['auth:sanctum', 'verified'])->get('/', function () {
 })->name('dashboard');
 
 
-Route::resource('register', RegisteredUserController::class)->middleware('auth');
-Auth::routes(['register' => false]);
