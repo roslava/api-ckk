@@ -30,13 +30,15 @@ $articleTxt = $article->article_text;
 
 
     
-
+    <div title ="Редактировать статью" class="article-preview__button article-preview__button_center" style="margin-bottom: 20px">
+        <a href="{{route('articles.edit', $article)}}"><i class="material-icons">create</i></a>
+            
+        </div>
 
     
     
 
-    <a href="{{route('articles.edit', $article)}}"  class="article__articleButton_edit">Редактировать</a>
-</div>
+
 
 @endsection
 
